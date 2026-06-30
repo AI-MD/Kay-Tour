@@ -1,4 +1,4 @@
-# osaka-travel-guide
+# Kay-Tour
 
 A reusable Claude Skill for building gay nightlife travel guides (bars, food, cafes, liquor shopping, day trips) for any city — plus the Osaka guide produced with it as a worked example.
 
