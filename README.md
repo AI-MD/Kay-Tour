@@ -1,42 +1,64 @@
-# Kay-Tour
+# Kay-Tour 🌈✈️
 
-A reusable Claude Skill for building gay nightlife travel guides (bars, food, cafes, liquor shopping, day trips) for any city — plus the Osaka guide produced with it as a worked example.
+게이 나이트라이프 중심 여행 가이드를 도시별로 만들어주는 Claude 스킬과, 그 스킬로 직접 만든 오사카 여행 가이드 예시.
 
-## Contents
+---
+
+## 📦 폴더 구조
 
 ```
-skill/gay-travel-guide/         — the Claude Skill itself (install this in Claude)
-├── SKILL.md                    — trigger conditions, research methodology, output structure
-└── references/
-    ├── city-hotels.md          — pre-researched 3★/4★/5★ hotel shortlists near major gay districts
-    │                              (Osaka, Tokyo, Fukuoka, Taipei, Bangkok, Shanghai, Chengdu)
-    └── country-liquor-guide.md — Korea duty-free import rules + country-by-country
-                                   signature spirits (Japan, Taiwan, Thailand, China)
-                                   — general-purpose, not gay-tour specific
-
-guides/osaka/
-└── ibis_final_v14.pdf          — worked example: full Osaka 4-night solo trip itinerary
-                                   (Doyamacho gay bar guide, food/cafe routes, whisky
-                                   shopping, day-trip options, real booking-based budget)
+Kay-Tour/
+├── skill/gay-travel-guide/          ← Claude에 업로드할 스킬
+│   ├── SKILL.md                     트리거 조건 · 리서치 방법론 · 출력 구조
+│   └── references/
+│       ├── city-hotels.md           7개 도시 3★/4★/5★ 호텔 리스트
+│       └── country-liquor-guide.md  나라별 면세 위스키 가이드 + 한국 입국 면세 규정
+│
+└── guides/osaka/
+    └── 오사카_도야마초_게이투어_가이드.pdf   ← 실제 사용 예시 (4박 솔로여행 풀가이드)
 ```
 
-## How to install the skill
+---
 
-Upload `skill/gay-travel-guide/` (or a zipped `.skill` package of it) to Claude. Once installed, requests like "오사카 게이바 가이드 만들어줘" or "방콕 게이투어 코스 짜줘" will trigger it automatically. The skill also answers plain "[country] 면세 위스키 추천" or "[city] 호텔 3성 4성 5성" questions using the bundled reference data, with no gay-travel angle required.
+## 🛠️ 스킬 설치 방법
 
-## About the example guide
+1. `skill/gay-travel-guide/` 폴더를 압축
+2. Claude에 업로드
+3. 이후 "오사카 게이바 가이드 만들어줘", "방콕 게이투어 코스 짜줘" 같은 요청에 자동으로 작동
 
-`guides/osaka/ibis_final_v14.pdf` is a real, fully-worked output: a 4-night Osaka solo trip planned around the Doyamacho gay district, built incrementally across a single planning conversation. Lodging (ibis Osaka Umeda) was finalized partway through, so this version is restructured around that confirmed booking rather than presenting it as an open comparison. It includes:
+스킬은 게이투어 콘텐츠 없이도 "일본 면세 위스키 추천해줘", "방콕 호텔 3성 4성 5성 추천" 같은 일반 질문에도 반응해.
 
-- Doyamacho bar-by-bar breakdown by crowd type (tourist-friendly, bear/mature, local/dining, Korean-operated)
-- Walking/transit routes from the hotel to the district (rain vs. clear-weather options)
-- Day/night bar-hopping routes and food/cafe recommendations along the way
-- Day-trip options from Osaka (Kyoto, Kobe, Nara, Arima Onsen) with transit times/costs
-- Whisky duty-free shopping guide with realistic 2L/$400 combo suggestions
-- A pre-departure checklist
+---
 
-Note: the main content angle is gay travel, but the food/cafe/whisky/day-trip sections are useful as general travel reference regardless of that angle.
+## 📍 무엇을 할 수 있나
 
-## License / usage
+| 기능 | 설명 |
+|---|---|
+| 🍸 게이바 팩트체크 | 여러 플랫폼 교차검증, 확인 안 된 곳은 솔직히 "확인 불가"라고 표시 |
+| 🏷️ 크라우드 분류 | 투어리스트 친화 / 베어·성인 / 로컬·올젠더 / 한국어 가능 등 |
+| 🗺️ 동선 설계 | 숙소 기준 도보·지하철 루트, 비 오는 날 대안까지 |
+| 🥃 면세 위스키 | 한국 입국 2L/$400 규정 기준 실전 조합 제안 |
+| 📄 PDF 산출 | 15장+ 풀버전, 1페이지 압축 요약본 둘 다 가능 |
 
-Personal travel planning content. Verify current pricing, hours, and venue status before relying on anything here — bars and hotels close/rebrand, and duty-free pricing fluctuates.
+---
+
+## 🗂️ 예시: 오사카 가이드
+
+`guides/osaka/오사카_도야마초_게이투어_가이드.pdf`
+
+도야마초(오사카 게이타운) 중심의 4박 솔로여행을 한 번의 대화로 완성한 결과물.
+
+- 도야마초 바 전체 분석 (투어리스트 친화 / 베어 / 한국인 운영 등 카테고리별)
+- 숙소~도야마초 동선 (도보 8~10분 / 우천시 지하철 5~7분)
+- 낮 카페 투어 + 저녁 맛집 + 밤 바 호핑 코스
+- 당일치기 옵션 (교토·고베·나라·아리마온천)
+- 야마자키 등 위스키 면세 쇼핑 가이드 (2L/$400 조합 4종)
+- 출발 전 체크리스트
+
+> ⚠️ 가격·영업시간·바 운영 상태는 시점에 따라 바뀔 수 있어요. 방문 전 최종 확인 권장.
+
+---
+
+## 📝 라이선스
+
+개인 여행 계획용 콘텐츠입니다. 자유롭게 참고하되, 정보의 최신성은 직접 확인해주세요.
